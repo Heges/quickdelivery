@@ -1,0 +1,8 @@
+@startuml
+!include <C4/C4_Container>
+
+Person(user, "Пользователь")
+System(system, "LIMS", "Лабораторная информационная система")
+Rel(user, system, "Работает с")
+
+@enduml
