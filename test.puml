@@ -1,8 +1,13 @@
 @startuml
-!include <C4/C4_Container>
 
-Person(user, "Пользователь")
-System(system, "LIMS", "Лабораторная информационная система")
-Rel(user, system, "Работает с")
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+Component "DiscountService" {
+  + calculateDiscount(userId) : double
+  + applyDiscount(orderId, discountAmount) : void
+}
+Component "UserProfileService" {
+  + getUserCategory(userId) : UserCategory
+} 
 
 @enduml
